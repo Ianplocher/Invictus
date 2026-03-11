@@ -20,22 +20,45 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in class to animatable elements
 document.querySelectorAll(
-  '.section-label, .content-heading, .content-text, .stats-row, .feature-card, .signup-form'
+  '.section-label, .content-heading, .content-text, .stats-row, .feature-card, .reg-card, .signup-form'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
-// Form submission (placeholder)
+// Form submission via Formspree
 document.getElementById('signupForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit');
+  const form = e.target;
+  const btn = form.querySelector('.btn-submit');
   const originalText = btn.textContent;
-  btn.textContent = 'THANK YOU!';
+  btn.textContent = 'SENDING...';
   btn.style.pointerEvents = 'none';
-  setTimeout(() => {
-    btn.textContent = originalText;
-    btn.style.pointerEvents = '';
-    e.target.reset();
-  }, 3000);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      btn.textContent = 'THANK YOU!';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.pointerEvents = '';
+      }, 3000);
+    } else {
+      btn.textContent = 'ERROR — TRY AGAIN';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.pointerEvents = '';
+      }, 3000);
+    }
+  }).catch(() => {
+    btn.textContent = 'ERROR — TRY AGAIN';
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.pointerEvents = '';
+    }, 3000);
+  });
 });

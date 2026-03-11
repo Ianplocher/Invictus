@@ -190,20 +190,20 @@
             Interested in joining Invictus Aquatics? Have questions about tryouts,
             registration, or our programs? Reach out and we'll get back to you.
           </p>
-          <form class="signup-form" id="signupForm">
+          <form class="signup-form" id="signupForm" action="https://formspree.io/f/xpqypgkg" method="POST">
             <div class="form-row">
               <div class="form-group">
-                <input type="text" placeholder="FIRST NAME" required>
+                <input type="text" name="first_name" placeholder="FIRST NAME" required>
               </div>
               <div class="form-group">
-                <input type="text" placeholder="LAST NAME" required>
+                <input type="text" name="last_name" placeholder="LAST NAME" required>
               </div>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="EMAIL ADDRESS" required>
+              <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
             </div>
             <div class="form-group">
-              <textarea placeholder="MESSAGE" rows="4"></textarea>
+              <textarea name="message" placeholder="MESSAGE" rows="4"></textarea>
             </div>
             <button type="submit" class="btn-submit">SEND MESSAGE</button>
           </form>
