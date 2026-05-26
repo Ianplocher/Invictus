@@ -71,13 +71,41 @@ const animatableSelectors = [
   '.social-links-large',
   '.calendar-embed',
   '.calendar-placeholder',
-  '.schedule-table-wrapper'
+  '.schedule-table-wrapper',
+  '.insta-card'
 ];
 
 document.querySelectorAll(animatableSelectors.join(', ')).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
+
+// Instagram carousel arrow navigation
+const instaCarousel = document.getElementById('instaCarousel');
+if (instaCarousel) {
+  const leftArrow = document.querySelector('.insta-arrow-left');
+  const rightArrow = document.querySelector('.insta-arrow-right');
+  const scrollAmount = 300;
+
+  if (leftArrow) {
+    leftArrow.addEventListener('click', () => {
+      instaCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+  if (rightArrow) {
+    rightArrow.addEventListener('click', () => {
+      instaCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+
+  // Hide/show arrows based on scroll position
+  const updateArrows = () => {
+    if (leftArrow) leftArrow.style.opacity = instaCarousel.scrollLeft <= 0 ? '0.3' : '1';
+    if (rightArrow) rightArrow.style.opacity = instaCarousel.scrollLeft >= (instaCarousel.scrollWidth - instaCarousel.clientWidth - 5) ? '0.3' : '1';
+  };
+  instaCarousel.addEventListener('scroll', updateArrows);
+  updateArrows();
+}
 
 // Form submission via Formspree (check for form existence)
 const signupForm = document.getElementById('signupForm');
