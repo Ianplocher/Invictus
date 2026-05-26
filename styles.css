@@ -793,37 +793,17 @@ a:hover {
   font-style: italic;
 }
 
-/* ===== CALENDAR PLACEHOLDER ===== */
-.calendar-placeholder {
+/* ===== CALENDAR EMBED ===== */
+.calendar-embed {
   margin-top: 40px;
-  border: 1px dashed var(--border);
-  padding: 60px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-card);
 }
 
-.calendar-placeholder-inner {
-  text-align: center;
-  color: var(--text-muted);
-}
-
-.calendar-placeholder-inner svg {
-  margin-bottom: 16px;
-  color: var(--text-muted);
-}
-
-.calendar-placeholder-inner p {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
-}
-
-.calendar-placeholder-inner span {
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 2px;
+.calendar-embed iframe {
+  display: block;
 }
 
 /* ===== WHAT TO EXPECT ===== */
