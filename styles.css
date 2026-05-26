@@ -793,6 +793,66 @@ a:hover {
   font-style: italic;
 }
 
+/* ===== PHOTO ROW ===== */
+.photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.photo-figure {
+  margin: 0;
+}
+
+.photo-figure.photo-full {
+  margin-bottom: 32px;
+}
+
+.section-photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.photo-full .section-photo {
+  height: 400px;
+}
+
+.photo-figure figcaption {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+/* ===== LOCATION CARD ===== */
+.location-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 32px;
+  margin: 24px 0;
+}
+
+.location-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.location-address {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
 /* ===== CALENDAR EMBED ===== */
 .calendar-embed {
   margin-top: 40px;
@@ -1138,6 +1198,18 @@ a:hover {
 
   .reg-grid {
     grid-template-columns: 1fr;
+  }
+
+  .photo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-photo {
+    height: 260px;
+  }
+
+  .photo-full .section-photo {
+    height: 300px;
   }
 
   .stats-row {
