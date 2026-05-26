@@ -9,11 +9,18 @@
   --bg-primary: #111111;
   --bg-secondary: #161616;
   --bg-card: #1a1a1a;
+  --bg-light: #ffffff;
+  --bg-light-alt: #f5f5f5;
+  --bg-light-card: #ffffff;
   --text-primary: #fefefe;
+  --text-dark: #1a1a1a;
+  --text-dark-secondary: #555555;
+  --text-dark-muted: #888888;
   --text-secondary: #a0a0a0;
   --text-muted: #606060;
   --accent: #ffffff;
   --border: #2a2a2a;
+  --border-light: #e0e0e0;
   --font-primary: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -345,11 +352,739 @@ a:hover {
 /* ===== SECTIONS ===== */
 .section {
   padding: 120px 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.section-light-alt {
+  background: var(--bg-light-alt);
+}
+
+.section-dark {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-top-color: var(--border);
+}
+
+.section-dark-alt {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-top-color: var(--border);
 }
 
 .alt-bg {
-  background: var(--bg-secondary);
+  background: var(--bg-light-alt);
+}
+
+/* ===== LIGHT SECTION OVERRIDES ===== */
+.section .section-label h2 {
+  color: var(--text-dark-muted);
+}
+
+.section .label-tag {
+  color: var(--text-dark-muted);
+}
+
+.section .content-heading {
+  color: var(--text-dark);
+}
+
+.section .content-text {
+  color: var(--text-dark-secondary);
+}
+
+.section .content-text a {
+  color: var(--text-dark);
+}
+
+.section .content-divider {
+  background: var(--border-light);
+}
+
+.section .stats-row {
+  border-top-color: var(--border-light);
+}
+
+.section .stat-number {
+  color: var(--text-dark);
+}
+
+.section .stat-label {
+  color: var(--text-dark-muted);
+}
+
+.section .feature-card {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .feature-card:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .feature-number {
+  color: var(--text-dark-muted);
+}
+
+.section .feature-card h4 {
+  color: var(--text-dark);
+}
+
+.section .feature-card p {
+  color: var(--text-dark-secondary);
+}
+
+.section .btn-section-link {
+  color: var(--text-dark);
+  border-color: var(--border-light);
+}
+
+.section .btn-section-link:hover {
+  border-color: var(--text-dark);
+}
+
+.section .value-card {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .value-card:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .value-card h4 {
+  color: var(--text-dark);
+}
+
+.section .value-card p {
+  color: var(--text-dark-secondary);
+}
+
+.section .photo-figure figcaption {
+  color: var(--text-dark-muted);
+}
+
+.section .photo-figure .section-photo {
+  border-color: var(--border-light);
+}
+
+.section .location-card {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .location-card h4 {
+  color: var(--text-dark);
+}
+
+.section .location-address {
+  color: var(--text-dark-secondary);
+}
+
+.section .calendar-embed {
+  border-color: var(--border-light);
+  background: var(--bg-light-card);
+}
+
+.section .schedule-table thead {
+  border-bottom-color: var(--border-light);
+}
+
+.section .schedule-table th {
+  color: var(--text-dark-muted);
+}
+
+.section .schedule-table td {
+  color: var(--text-dark-secondary);
+  border-bottom-color: var(--border-light);
+}
+
+.section .schedule-table td strong {
+  color: var(--text-dark);
+}
+
+.section .schedule-table tbody tr:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.section .event-card {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .event-card:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .event-month {
+  color: var(--text-dark);
+}
+
+.section .event-day {
+  color: var(--text-dark-muted);
+}
+
+.section .event-details h4 {
+  color: var(--text-dark);
+}
+
+.section .event-details p {
+  color: var(--text-dark-secondary);
+}
+
+.section .event-location {
+  color: var(--text-dark-muted);
+}
+
+.section .expect-item {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .expect-item:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .expect-item h4 {
+  color: var(--text-dark);
+}
+
+.section .expect-item p {
+  color: var(--text-dark-secondary);
+}
+
+.section .faq-item {
+  border-bottom-color: var(--border-light);
+}
+
+.section .faq-item:first-child {
+  border-top-color: var(--border-light);
+}
+
+.section .faq-question {
+  color: var(--text-dark);
+}
+
+.section .faq-question::after {
+  color: var(--text-dark-muted);
+}
+
+.section .faq-question:hover {
+  color: var(--text-dark-secondary);
+}
+
+.section .faq-answer p {
+  color: var(--text-dark-secondary);
+}
+
+.section .faq-answer a {
+  color: var(--text-dark);
+}
+
+.section .contact-info-item {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .contact-info-item h4 {
+  color: var(--text-dark);
+}
+
+.section .contact-info-item p {
+  color: var(--text-dark-secondary);
+}
+
+.section .social-link-large {
+  border-color: var(--border-light);
+  color: var(--text-dark-secondary);
+}
+
+.section .social-link-large:hover {
+  border-color: var(--text-dark);
+  color: var(--text-dark);
+}
+
+.section .step-item {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .step-item:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .step-number {
+  color: var(--text-dark-muted);
+}
+
+.section .step-item h4 {
+  color: var(--text-dark);
+}
+
+.section .step-item p {
+  color: var(--text-dark-secondary);
+}
+
+/* Form inputs on light backgrounds */
+.section .form-group input,
+.section .form-group textarea {
+  color: var(--text-dark);
+  border-bottom-color: var(--border-light);
+}
+
+.section .form-group input::placeholder,
+.section .form-group textarea::placeholder {
+  color: var(--text-dark-muted);
+}
+
+.section .form-group input:focus,
+.section .form-group textarea:focus {
+  border-color: var(--text-dark-secondary);
+}
+
+.section .btn-submit {
+  color: var(--bg-light);
+  background: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.section .btn-submit:hover {
+  background: transparent;
+  color: var(--text-dark);
+}
+
+/* Registration cards on light backgrounds */
+.section .reg-card {
+  background: var(--bg-light-card);
+  border-color: var(--border-light);
+}
+
+.section .reg-card:hover {
+  border-color: var(--text-dark-muted);
+}
+
+.section .reg-age {
+  color: var(--text-dark);
+}
+
+.section .reg-card-header {
+  border-bottom-color: var(--border-light);
+}
+
+.section .reg-season {
+  color: var(--text-dark-muted);
+}
+
+.section .reg-title {
+  color: var(--text-dark);
+}
+
+.section .reg-desc {
+  color: var(--text-dark-secondary);
+}
+
+.section .btn-register {
+  color: var(--bg-light);
+  background: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.section .btn-register:hover {
+  background: transparent;
+  color: var(--text-dark);
+}
+
+/* ===== DARK SECTION OVERRIDES (restore dark styling) ===== */
+.section-dark .section-label h2,
+.section-dark-alt .section-label h2 {
+  color: var(--text-secondary);
+}
+
+.section-dark .label-tag,
+.section-dark-alt .label-tag {
+  color: var(--text-muted);
+}
+
+.section-dark .content-heading,
+.section-dark-alt .content-heading {
+  color: var(--text-primary);
+}
+
+.section-dark .content-text,
+.section-dark-alt .content-text {
+  color: var(--text-secondary);
+}
+
+.section-dark .content-text a,
+.section-dark-alt .content-text a {
+  color: var(--text-primary);
+}
+
+.section-dark .content-divider,
+.section-dark-alt .content-divider {
+  background: var(--border);
+}
+
+.section-dark .stats-row,
+.section-dark-alt .stats-row {
+  border-top-color: var(--border);
+}
+
+.section-dark .stat-number,
+.section-dark-alt .stat-number {
+  color: var(--text-primary);
+}
+
+.section-dark .stat-label,
+.section-dark-alt .stat-label {
+  color: var(--text-muted);
+}
+
+.section-dark .feature-card,
+.section-dark-alt .feature-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .feature-card:hover,
+.section-dark-alt .feature-card:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .feature-number,
+.section-dark-alt .feature-number {
+  color: var(--text-muted);
+}
+
+.section-dark .feature-card h4,
+.section-dark-alt .feature-card h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .feature-card p,
+.section-dark-alt .feature-card p {
+  color: var(--text-secondary);
+}
+
+.section-dark .btn-section-link,
+.section-dark-alt .btn-section-link {
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.section-dark .btn-section-link:hover,
+.section-dark-alt .btn-section-link:hover {
+  border-color: var(--text-primary);
+}
+
+.section-dark .reg-card,
+.section-dark-alt .reg-card {
+  background: var(--bg-primary);
+  border-color: var(--border);
+}
+
+.section-dark .reg-card:hover,
+.section-dark-alt .reg-card:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .reg-age,
+.section-dark-alt .reg-age {
+  color: var(--text-primary);
+}
+
+.section-dark .reg-card-header,
+.section-dark-alt .reg-card-header {
+  border-bottom-color: var(--border);
+}
+
+.section-dark .reg-season,
+.section-dark-alt .reg-season {
+  color: var(--text-muted);
+}
+
+.section-dark .reg-title,
+.section-dark-alt .reg-title {
+  color: var(--text-primary);
+}
+
+.section-dark .reg-desc,
+.section-dark-alt .reg-desc {
+  color: var(--text-secondary);
+}
+
+.section-dark .btn-register,
+.section-dark-alt .btn-register {
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.section-dark .btn-register:hover,
+.section-dark-alt .btn-register:hover {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.section-dark .value-card,
+.section-dark-alt .value-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .value-card:hover,
+.section-dark-alt .value-card:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .value-card h4,
+.section-dark-alt .value-card h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .value-card p,
+.section-dark-alt .value-card p {
+  color: var(--text-secondary);
+}
+
+.section-dark .photo-figure figcaption,
+.section-dark-alt .photo-figure figcaption {
+  color: var(--text-muted);
+}
+
+.section-dark .photo-figure .section-photo,
+.section-dark-alt .photo-figure .section-photo {
+  border-color: var(--border);
+}
+
+.section-dark .location-card,
+.section-dark-alt .location-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .location-card h4,
+.section-dark-alt .location-card h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .location-address,
+.section-dark-alt .location-address {
+  color: var(--text-secondary);
+}
+
+.section-dark .calendar-embed,
+.section-dark-alt .calendar-embed {
+  border-color: var(--border);
+  background: var(--bg-card);
+}
+
+.section-dark .schedule-table thead,
+.section-dark-alt .schedule-table thead {
+  border-bottom-color: var(--border);
+}
+
+.section-dark .schedule-table th,
+.section-dark-alt .schedule-table th {
+  color: var(--text-secondary);
+}
+
+.section-dark .schedule-table td,
+.section-dark-alt .schedule-table td {
+  color: var(--text-secondary);
+  border-bottom-color: var(--border);
+}
+
+.section-dark .schedule-table td strong,
+.section-dark-alt .schedule-table td strong {
+  color: var(--text-primary);
+}
+
+.section-dark .schedule-table tbody tr:hover,
+.section-dark-alt .schedule-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.section-dark .event-card,
+.section-dark-alt .event-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .event-card:hover,
+.section-dark-alt .event-card:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .event-month,
+.section-dark-alt .event-month {
+  color: var(--text-secondary);
+}
+
+.section-dark .event-day,
+.section-dark-alt .event-day {
+  color: var(--text-muted);
+}
+
+.section-dark .event-details h4,
+.section-dark-alt .event-details h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .event-details p,
+.section-dark-alt .event-details p {
+  color: var(--text-secondary);
+}
+
+.section-dark .event-location,
+.section-dark-alt .event-location {
+  color: var(--text-muted);
+}
+
+.section-dark .expect-item,
+.section-dark-alt .expect-item {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .expect-item:hover,
+.section-dark-alt .expect-item:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .expect-item h4,
+.section-dark-alt .expect-item h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .expect-item p,
+.section-dark-alt .expect-item p {
+  color: var(--text-secondary);
+}
+
+.section-dark .faq-item,
+.section-dark-alt .faq-item {
+  border-bottom-color: var(--border);
+}
+
+.section-dark .faq-item:first-child,
+.section-dark-alt .faq-item:first-child {
+  border-top-color: var(--border);
+}
+
+.section-dark .faq-question,
+.section-dark-alt .faq-question {
+  color: var(--text-primary);
+}
+
+.section-dark .faq-question::after,
+.section-dark-alt .faq-question::after {
+  color: var(--text-muted);
+}
+
+.section-dark .faq-question:hover,
+.section-dark-alt .faq-question:hover {
+  color: var(--text-secondary);
+}
+
+.section-dark .faq-answer p,
+.section-dark-alt .faq-answer p {
+  color: var(--text-secondary);
+}
+
+.section-dark .faq-answer a,
+.section-dark-alt .faq-answer a {
+  color: var(--text-primary);
+}
+
+.section-dark .contact-info-item,
+.section-dark-alt .contact-info-item {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .contact-info-item h4,
+.section-dark-alt .contact-info-item h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .contact-info-item p,
+.section-dark-alt .contact-info-item p {
+  color: var(--text-secondary);
+}
+
+.section-dark .social-link-large,
+.section-dark-alt .social-link-large {
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.section-dark .social-link-large:hover,
+.section-dark-alt .social-link-large:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.section-dark .step-item,
+.section-dark-alt .step-item {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.section-dark .step-item:hover,
+.section-dark-alt .step-item:hover {
+  border-color: var(--text-muted);
+}
+
+.section-dark .step-number,
+.section-dark-alt .step-number {
+  color: var(--text-muted);
+}
+
+.section-dark .step-item h4,
+.section-dark-alt .step-item h4 {
+  color: var(--text-primary);
+}
+
+.section-dark .step-item p,
+.section-dark-alt .step-item p {
+  color: var(--text-secondary);
+}
+
+.section-dark .form-group input,
+.section-dark-alt .form-group input,
+.section-dark .form-group textarea,
+.section-dark-alt .form-group textarea {
+  color: var(--text-primary);
+  border-bottom-color: var(--border);
+}
+
+.section-dark .form-group input::placeholder,
+.section-dark-alt .form-group input::placeholder,
+.section-dark .form-group textarea::placeholder,
+.section-dark-alt .form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.section-dark .form-group input:focus,
+.section-dark-alt .form-group input:focus,
+.section-dark .form-group textarea:focus,
+.section-dark-alt .form-group textarea:focus {
+  border-color: var(--text-secondary);
+}
+
+.section-dark .btn-submit,
+.section-dark-alt .btn-submit {
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.section-dark .btn-submit:hover,
+.section-dark-alt .btn-submit:hover {
+  background: transparent;
+  color: var(--text-primary);
 }
 
 .section-grid {
@@ -543,6 +1278,8 @@ a:hover {
 /* ===== REGISTRATION ===== */
 .registration-section {
   background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-top-color: var(--border);
 }
 
 .reg-grid {
@@ -1030,6 +1767,8 @@ a:hover {
 /* ===== CONTACT / FORM ===== */
 .contact-section {
   background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-top-color: var(--border);
 }
 
 .signup-form {
@@ -1094,10 +1833,104 @@ a:hover {
   color: var(--text-primary);
 }
 
+/* ===== SECTION BANNER ===== */
+.section-banner {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.section-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17,17,17,0.3) 0%, rgba(17,17,17,0.1) 50%, rgba(17,17,17,0.3) 100%);
+}
+
+/* ===== PROGRAM IMAGE CARDS ===== */
+.program-image-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.program-image-card {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+
+.section-dark .program-image-card,
+.section-dark-alt .program-image-card {
+  border-color: var(--border);
+}
+
+.program-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.program-image-card:hover img {
+  transform: scale(1.05);
+}
+
+.program-image-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(17,17,17,0.5) 100%);
+}
+
+.program-image-card-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fefefe;
+}
+
+/* ===== INNER PAGE SECTION HERO IMAGE ===== */
+.section-hero-accent {
+  position: relative;
+  margin-bottom: 40px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.section-hero-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section-hero-accent-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17,17,17,0.15) 0%, rgba(17,17,17,0.05) 50%, rgba(17,17,17,0.2) 100%);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   padding: 60px 0 40px;
   border-top: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .footer-grid {
@@ -1245,6 +2078,18 @@ a:hover {
   .social-links-large {
     flex-direction: column;
   }
+
+  .section-banner {
+    height: 200px;
+  }
+
+  .program-image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero-accent {
+    height: 160px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1376,5 +2221,17 @@ a:hover {
   .faq-question {
     font-size: 13px;
     letter-spacing: 1px;
+  }
+
+  .section-banner {
+    height: 160px;
+  }
+
+  .program-image-card {
+    height: 180px;
+  }
+
+  .section-hero-accent {
+    height: 140px;
   }
 }

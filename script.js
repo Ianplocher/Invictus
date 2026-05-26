@@ -69,6 +69,7 @@ const animatableSelectors = [
   '.contact-info-item',
   '.step-item',
   '.social-links-large',
+  '.calendar-embed',
   '.calendar-placeholder',
   '.schedule-table-wrapper'
 ];
