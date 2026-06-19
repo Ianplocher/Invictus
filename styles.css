@@ -261,6 +261,18 @@ a:hover {
   opacity: 1;
 }
 
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  margin-left: 12px;
+}
+
+.btn-hero-secondary:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -693,6 +705,17 @@ a:hover {
 .section .btn-register:hover {
   background: transparent;
   color: var(--text-dark);
+}
+
+.reg-btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.reg-btn-group .btn-register {
+  flex: 1;
+  text-align: center;
 }
 
 /* ===== DARK SECTION OVERRIDES (restore dark styling) ===== */
@@ -2345,6 +2368,15 @@ a:hover {
 
   .hero-values {
     letter-spacing: 3px;
+  }
+
+  .btn-hero-secondary {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .reg-btn-group {
+    flex-direction: column;
   }
 
   .content-heading {
